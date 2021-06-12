@@ -1,6 +1,6 @@
 import ratingByHealth from './../matchers';
 
-test ('changing array by health rate', () => {
+test ('changing array by health rate by toBe', () => {
   const warriors = [
     {name: 'мечник', health: 10},
     {name: 'маг', health: 100},
@@ -12,6 +12,21 @@ test ('changing array by health rate', () => {
     {name: 'мечник', health: 10},
   ];
   expect(ratingByHealth(warriors)).toBe(expexted);
+
+})
+
+test ('changing array by health rate', () => {
+  const warriors = [
+    {name: 'мечник', health: 10},
+    {name: 'маг', health: 100},
+    {name: 'лучник', health: 80},
+  ];
+  const expexted = [
+    {name: 'маг', health: 100},
+    {name: 'лучник', health: 80},
+    {name: 'мечник', health: 10},
+  ];
+
   expect(ratingByHealth(warriors)).toEqual(expexted);
 
 })
