@@ -11,7 +11,7 @@ test ('changing array by health rate by toBe', () => {
     {name: 'лучник', health: 80},
     {name: 'мечник', health: 10},
   ];
-  expect(ratingByHealth(warriors)).toBe(expexted);
+  expect(ratingByHealth(warriors)).not.toBe(expexted);
 
 })
 
